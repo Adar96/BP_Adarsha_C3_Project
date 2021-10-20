@@ -17,8 +17,8 @@ public class Restaurant {
         this.closingTime = closingTime;
         
       //Adding default menu items
-        this.menu.add(new Item("Palav",18));
-        this.menu.add(new Item("Payasa",20));
+        this.menu.add(new Item("Palav",73));
+        this.menu.add(new Item("Payasa",45));
   
     }
     
@@ -88,6 +88,13 @@ public class Restaurant {
         return name;
     }
 
-  
+    public int getOrderValue(List<Item> item){
+        int totalValue = 0;
+        for (Item myItem : item) {
+            totalValue += myItem.getPrice();
+        }
+        return totalValue;
+    }
+    
 
 }
